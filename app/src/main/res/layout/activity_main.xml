@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="time"
+            type="com.kd.appzhouning.Time" />
+        <variable
+            name="dmrd"
+            type="com.kd.appzhouning.Dmrd" />
+        <variable
+            name="dmgd"
+            type="com.kd.appzhouning.Dmgd" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#000"
+        android:layout_width="192px"
+        android:layout_height="96px"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                android:text="@{time.date}"
+                android:textColor="#f00"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                android:text="@{time.week}"
+                android:textColor="#f00"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+
+                android:gravity="center"
+                android:textSize="@dimen/textSize"
+                android:text="@{time.time}"
+                android:textColor="#f00"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                app:setText="@{dmgd.wd}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                app:setText="@{dmgd.sd}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                app:setText="@{dmgd.dw}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textSize"
+                app:setText="@{dmrd.gzh}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

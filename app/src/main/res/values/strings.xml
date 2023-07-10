@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppZhouNing</string>
+    <dimen name="textSize">7sp</dimen>
+</resources>
